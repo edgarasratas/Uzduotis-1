@@ -1,6 +1,16 @@
 ﻿#include <iostream>
+#include <string>
 
 using namespace std;
+
+bool endsWith(string str, string ending) {
+    if (str.length() >= ending.length()) {
+        return (0 == str.compare(str.length() - ending.length(), ending.length(), ending));
+    }
+    else {
+        return false;
+    }
+}
 
 int main()
 {
@@ -12,6 +22,13 @@ int main()
     cout << "Iveskite savo varda:\n";
     cin >> name;
     cout << endl;
+
+    if (endsWith(name, "s")) {
+        greeting = "Sveikas, ";
+    }
+    else if (endsWith(name, "a")) {
+        greeting = "Sveika, ";
+    }
 
     greeting += name;
 
