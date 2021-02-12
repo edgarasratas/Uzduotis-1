@@ -3,14 +3,7 @@
 
 using namespace std;
 
-bool endsWith(string str, string ending) {
-    if (str.length() >= ending.length()) {
-        return (0 == str.compare(str.length() - ending.length(), ending.length(), ending));
-    }
-    else {
-        return false;
-    }
-}
+bool endsWith(string str, string ending);
 
 int main()
 {
@@ -73,5 +66,15 @@ int main()
     for (int i = 0; i < greeting.length() + 5; i++)
     {
         cout << frame;
+    }
+}
+
+
+bool endsWith(string str, string ending) {
+    if (str.length() >= ending.length()) {
+        return (0 == str.compare(str.length() - ending.length(), ending.length(), ending));
+    }
+    else {
+        return false;
     }
 }
