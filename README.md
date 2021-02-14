@@ -12,3 +12,8 @@ The user can input his name and is greeted with a nice framed greeting
 The program is modified so that the user is greeted accordingly to the user's gender
 
 ![image](https://user-images.githubusercontent.com/73912309/107798652-1ec0ac00-6d65-11eb-92f8-eda916a6a00c.png)
+
+[v1.0](https://github.com/edgarasratas/Uzduotis-1/tree/v1.0)
+--------------------------------------------------------------
+The user can now choose how big the frame of the greeting will be
+
