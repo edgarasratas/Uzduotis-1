@@ -17,3 +17,4 @@ The program is modified so that the user is greeted accordingly to the user's ge
 --------------------------------------------------------------
 The user can now choose how big the frame of the greeting will be
 
+![image](https://user-images.githubusercontent.com/73912309/107881952-6a06c600-6eef-11eb-88ca-2e5ba51f51ce.png)
