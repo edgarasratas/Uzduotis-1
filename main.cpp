@@ -10,6 +10,7 @@ int main()
     char frame = '*';
     string greeting = "Sveikas, ";
     string name;
+    int height, length;
 
     //asks the user to input his name
     cout << "Iveskite savo varda:\n";
@@ -23,47 +24,63 @@ int main()
         greeting = "Sveika, ";
     }
 
-    greeting += name;
+    greeting += name + "!";
+
+    cout << "Iveskite remus (min 5x5):\n";
+    cout << "Aukstis: ";
+    cin >> height;
+    cout << "Ilgis: ";
+    cin >> length;
+    if (height < 5 || length < 5) {
+        cout << "\nKlaida. Bandykite dar karta";
+        return 0;
+    }
+
+    while (length < greeting.length() + 4)
+    {
+        cout << "Jusu pasveikinimas netelpa i remus. Ilgis turi buti " << greeting.length() + 4 << ". Pabandykite ilgi ivesti is naujo." << endl;
+        cout << "Ilgis: ";
+        cin >> length;
+    }
 
     //prints the first line
-    for (int i = 0; i < greeting.length() + 5; i++)
+    for (int i = 0; i < length; i++)
     {
         cout << frame;
     }
 
     cout << endl;
 
-    //prints the second line
-    for (int i = 1; i <= greeting.length() + 5; i++)
+    for (int i = 0; i < height; i++)
     {
-        if ((i == 1) || (i == greeting.length() + 5)) {
-            cout << frame;
+        cout << frame;
+        if (i == height / 2)
+        {
+            for (int j = 0; j < length - (greeting.length() + 2); j++)
+            {
+                for (int k = 0; k < (length - (greeting.length() + 2)) / 2; k++)
+                {
+                    cout << " ";
+                    break;
+                }
+
+                if (j == ((length - (greeting.length() + 2)) / 2) - 1)
+                {
+                    cout << greeting;
+                }
+            }
         }
-        else {
-            cout << ' ';
+        else
+        {
+            for (int j = 0; j < length - 2; j++)
+            {
+                cout << " ";
+            }
         }
+        cout << frame << endl;
     }
 
-    cout << endl;
-
-    //prints the third line
-    cout << "* " << greeting << "! *\n";
-
-    //prints the fourth line
-    for (int i = 1; i <= greeting.length() + 5; i++)
-    {
-        if ((i == 1) || (i == greeting.length() + 5)) {
-            cout << frame;
-        }
-        else {
-            cout << ' ';
-        }
-    }
-
-    cout << endl;
-
-    //prints the fifth line
-    for (int i = 0; i < greeting.length() + 5; i++)
+    for (int i = 0; i < length; i++)
     {
         cout << frame;
     }
